@@ -2,4 +2,4 @@ schedule: every month
 update: false
 
 requirements:
-  - ./lib/list.txt
+  - lib/list.txt

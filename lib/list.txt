@@ -42,7 +42,7 @@ jsonrpclib==0.1.3  #  On commit e3a3cdedc9577b25b91274815b38ba7f3bc43c68, this i
 lockfile==0.11.0
 Mako==1.0.3
 markdown2==2.3.1  # => markdown2.py
-MarkupSafe==0.23
+MarkupSafe==1.0
 # MultipartPostHandler.py  ## FIXME: Unused
 ndg-httpsclient==0.3.3  # => ndg/httpsclient
 # oauth2  # Based off of https://github.com/joestump/python-oauth2, but modified in some way...

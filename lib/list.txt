@@ -70,7 +70,7 @@ sqlalchemy==0.9.4
 stevedore==1.10.0
 subliminal==2.0.5 # On commit 7eb7a53fe6bcaf3e01a6b44c8366faf7c96f7f1b, but basically on this version (https://github.com/Diaoul/subliminal)
 # synchronousdeluge  # not on PyPI (https://github.com/chrippa/gevent-deluge)
-tmdbsimple==0.3.0  # => tmdb_api (tmdbsimple.py => tmdb_api.py)
+tmdbsimple==1.6.1  # => tmdb_api (tmdbsimple.py => tmdb_api.py)
 tornado==4.4.2
 tus.py==1.2.0
 tvdb_api==1.9  # <Heavily Modified> Deprecated API, will be disabled by October 1st, 2017

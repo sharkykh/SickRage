@@ -44,7 +44,7 @@ Mako==1.0.6
 markdown2==2.3.4  # => markdown2.py
 MarkupSafe==1.0
 # MultipartPostHandler.py  ## FIXME: Unused
-ndg-httpsclient==0.3.3  # => ndg/httpsclient
+ndg-httpsclient==0.4.2  # => ndg/httpsclient
 # oauth2  # Based off of https://github.com/joestump/python-oauth2, but modified in some way...
 pgi==0.0.11.1
 # pkg_resources.py  # copied from setuptools?

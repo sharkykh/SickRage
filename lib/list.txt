@@ -48,7 +48,7 @@ ndg-httpsclient==0.3.3  # => ndg/httpsclient
 # oauth2  # Based off of https://github.com/joestump/python-oauth2, but modified in some way...
 pgi==0.0.11.1
 # pkg_resources.py  # copied from setuptools?
-profilehooks==1.4  # => profilehooks.py
+profilehooks==1.9.0  # => profilehooks.py
 putio.py==6.1.0  # => putiopy.py
 pyasn1==0.1.7
 pymediainfo==2.0  # .egg file

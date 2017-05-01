@@ -53,7 +53,7 @@ putio.py==6.1.0  # => putiopy.py
 pyasn1==0.1.7
 pymediainfo==2.0  # .egg file
 pynma==1.0
-pysrt==1.0.1
+pysrt==1.1.1
 python-twitter==1.0  # => pythontwitter
 pytz==2016.4  # .egg file
 rarfile==3.0

@@ -74,7 +74,7 @@ tmdbsimple==1.6.1  # => tmdb_api (tmdbsimple.py => tmdb_api.py)
 tornado==4.5.1
 tus.py==1.3.0
 tvdb-api==1.10  # <Heavily Modified> Deprecated API, will be disabled by October 1st, 2017
-twilio==5.6.0
+twilio==6.1.0
 tzlocal==1.3.2  # On commit 8e0a63ddbf50ff9e5b1d23b540cdc343efe1a4af, this is the closest version (https://github.com/regebro/tzlocal)
 unidecode==0.04.12
 validators==0.10

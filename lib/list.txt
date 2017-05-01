@@ -15,7 +15,7 @@ cachecontrol==0.11.5
 # certgen.py  # not on PyPI (https://github.com/pyca/pyopenssl/blob/master/examples/certgen.py)
 certifi==2016.9.26
 cfscrape==1.7.1
-chardet==2.3.0
+chardet==3.0.2
 configobj==4.6.0  # => configobj.py
 python-dateutil==2.5.0  # => dateutil
 decorator==4.0.10  # => decorator.py

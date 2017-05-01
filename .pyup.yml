@@ -1,4 +1,4 @@
-schedule: every month
+# schedule: every month
 update: false
 
 requirements:

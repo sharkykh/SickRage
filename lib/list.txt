@@ -67,7 +67,7 @@ six==1.10.0
 # SocksiPy==1.00  # => socks | not on PyPI (https://sourceforge.net/projects/socksipy/files/socksipy/SocksiPy%201.00)
 sqlalchemy==0.9.4
 # sqliteshelf.py  ## FIXME: Unused
-stevedore==1.10.0
+stevedore==1.21.0
 subliminal==2.0.5 # On commit 7eb7a53fe6bcaf3e01a6b44c8366faf7c96f7f1b, but basically on this version (https://github.com/Diaoul/subliminal)
 # synchronousdeluge  # not on PyPI (https://github.com/chrippa/gevent-deluge)
 tmdbsimple==0.3.0  # => tmdb_api (tmdbsimple.py => tmdb_api.py)

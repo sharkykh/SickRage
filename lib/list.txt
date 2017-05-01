@@ -40,7 +40,7 @@ jsonrpclib==0.1.3  #  On commit e3a3cdedc9577b25b91274815b38ba7f3bc43c68, this i
 # libgrowl  # Custom made by midgetspy on SickBeard. Some of the code is from https://github.com/kfdm/gntp
 # libtrakt  # Custom made
 lockfile==0.11.0
-Mako==1.0.3
+Mako==1.0.6
 markdown2==2.3.1  # => markdown2.py
 MarkupSafe==0.23
 # MultipartPostHandler.py  ## FIXME: Unused

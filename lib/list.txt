@@ -55,7 +55,7 @@ pymediainfo==2.0  # .egg file
 pynma==1.0
 pysrt==1.0.1
 python-twitter==1.0  # => pythontwitter
-pytz==2016.4  # .egg file
+pytz==2017.2  # .egg file
 rarfile==3.0
 rebulk==0.7.6 # On commit 42d0a58af9d793334616a6582f2a83b0fae0dd5f, but basically on this version (https://github.com/Toilal/rebulk)
 requests==2.13.0

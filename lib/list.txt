@@ -17,7 +17,7 @@ certifi==2017.4.17
 cfscrape==1.8.0
 chardet==3.0.2
 configobj==5.0.6  # => configobj.py
-python-dateutil==2.5.0  # => dateutil
+python-dateutil==2.6.0  # => dateutil
 decorator==4.0.10  # => decorator.py
 dogpile.cache==0.5.7  # => dogpile/cache
 dogpile.core==0.4.1  # => dogpile/core

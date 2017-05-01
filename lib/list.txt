@@ -41,7 +41,7 @@ jsonrpclib==0.13  #  On commit e3a3cdedc9577b25b91274815b38ba7f3bc43c68, this is
 # libtrakt  # Custom made
 lockfile==0.12.2
 Mako==1.0.6
-markdown2==2.3.1  # => markdown2.py
+markdown2==2.3.4  # => markdown2.py
 MarkupSafe==0.23
 # MultipartPostHandler.py  ## FIXME: Unused
 ndg-httpsclient==0.3.3  # => ndg/httpsclient

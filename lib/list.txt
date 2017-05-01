@@ -50,7 +50,7 @@ pgi==0.0.11.1
 # pkg_resources.py  # copied from setuptools?
 profilehooks==1.4  # => profilehooks.py
 putio.py==6.1.0  # => putiopy.py
-pyasn1==0.1.7
+pyasn1==0.2.3
 pymediainfo==2.0  # .egg file
 pynma==1.0
 pysrt==1.0.1

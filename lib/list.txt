@@ -23,7 +23,7 @@ dogpile.cache==0.6.2  # => dogpile/cache
 dogpile.core==0.4.1  # => dogpile/core
 enum34==1.1.6
 enzyme==0.4.2  # latest (dev) as of 2017-04-22 (https://github.com/Diaoul/enzyme.git)
-fake_useragent==0.1.2
+fake-useragent==0.1.7
 python-fanart==1.4.0  # => fanart <Modified> (https://github.com/z4r/python-fanart)
 feedparser==5.2.1
 futures==3.0.5  # => concurrent/futures

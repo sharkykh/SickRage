@@ -27,7 +27,7 @@ fake-useragent==0.1.7
 python-fanart==1.4.0  # => fanart <Modified> (https://github.com/z4r/python-fanart)
 feedparser==5.2.1
 futures==3.1.1  # => concurrent/futures
-PyGithub==1.26.0  # => github <Modified> On commit 5ad69189ea527334a4501b73b6641a7757519e34, this is the closest version (https://github.com/PyGithub/PyGithub.git)
+PyGithub==1.34  # => github <Modified> On commit 5ad69189ea527334a4501b73b6641a7757519e34, this is the closest version (https://github.com/PyGithub/PyGithub.git)
 guessit==2.1.1  # NOTE: (dev)
 hachoir_core==1.3.4
 hachoir_metadata==1.3.3

@@ -18,7 +18,7 @@ cfscrape==1.7.1
 chardet==2.3.0
 configobj==4.6.0  # => configobj.py
 python-dateutil==2.5.0  # => dateutil
-decorator==4.0.10  # => decorator.py
+decorator==4.0.11  # => decorator.py
 dogpile.cache==0.5.7  # => dogpile/cache
 dogpile.core==0.4.1  # => dogpile/core
 enum34==1.0.4

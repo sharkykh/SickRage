@@ -1,5 +1,18 @@
-# schedule: every month
-update: false
+# update schedule, default is not set
+# the bot will visit the repo once and bundle all updates in a single PR for the given
+# day/week/month
+# schedule: every month # allowed ["every day", "every week", "every two weeks", "every month"]
 
+# configure updates globally, default is all
+update: false # allowed [all, insecure, False]
+
+# configure the branch prefix the bot is using, default is pyup-
+branch_prefix: pyup/
+
+# add a label to pull requests, default is not set
+# requires private repo permissions, even on public repos
+label_prs: Upstream
+
+# adding requirements files manually, default is empty
 requirements:
   - lib/list.txt

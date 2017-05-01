@@ -14,7 +14,7 @@ beautifulsoup4==4.4.1  # => bs4
 cachecontrol==0.11.5
 # certgen.py  # not on PyPI (https://github.com/pyca/pyopenssl/blob/master/examples/certgen.py)
 certifi==2016.9.26
-cfscrape==1.7.1
+cfscrape==1.8.0
 chardet==2.3.0
 configobj==4.6.0  # => configobj.py
 python-dateutil==2.5.0  # => dateutil

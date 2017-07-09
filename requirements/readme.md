@@ -7,7 +7,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | babelfish | 0.5.5 | Resolved by [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | backports_abc | 0.5
 :ok: | backports.ssl-match-hostname | 3.5.0.1
-:ok: | beautifulsoup4 | 4.5.3
+:ok: | beautifulsoup4 | 4.6.0
 :ok: | bencode | 1.0 | Resolved by [#3858](https://github.com/SickRage/SickRage/pull/3858) + [#3871](https://github.com/SickRage/SickRage/pull/3871)<br>A newer version (fork) is available: [GH:fuzeman/bencode.py](https://github.com/fuzeman/bencode.py)
 :ok: | cachecontrol | 0.11.5
 :warning: | certgen.py | [d52975c](https://github.com/pyca/pyopenssl/blob/d52975cef3a36e18552aeb23de7c06aa73d76454/examples/certgen.py) | Source: [GH:pyca/pyopenssl](https://github.com/pyca/pyopenssl/blob/master/examples/certgen.py)

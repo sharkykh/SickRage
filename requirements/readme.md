@@ -18,7 +18,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | decorator | 4.1.1
 :ok: | dogpile.cache | 0.6.4
 :ok: | enzyme | 0.4.1
-:ok: | fake-useragent | 0.1.2 | Note: There's a `ua.json` file that's used by `sickbeard.common`,<br>should be moved to a better location.
+:ok: | fake-useragent | 0.1.7
 :warning: | feedparser | [f1dd1bb](https://github.com/kurtmckee/feedparser/tree/f1dd1bb923ebfe6482fc2521c1f150b4032289ec) | Vanilla'd by [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | futures | 3.1.1
 :warning: | guessit | [a4fb286](https://github.com/guessit-io/guessit/tree/a4fb2865d4b697397aa976388bbd0edf558a24fb)

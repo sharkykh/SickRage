@@ -32,7 +32,7 @@ import re
 import uuid
 from os import path
 
-from fake_useragent import settings as UA_SETTINGS, UserAgent
+from fake_useragent import FakeUserAgent
 # noinspection PyUnresolvedReferences
 from six.moves import reduce
 
@@ -44,14 +44,15 @@ from sickrage.tagger.episode import EpisodeTags
 
 gettext.install('messages', unicode=1, codeset='UTF-8', names=["ngettext"])
 
+INSTANCE_ID = str(uuid.uuid1())
+USER_AGENT = 'Sick-Rage.CE.1/({0}; {1}; {2})'.format(platform.system(), platform.release(), INSTANCE_ID)
+
 # If some provider has an issue with functionality of SR, other than user agents, it's best to come talk to us rather than block.
 # It is no different than us going to a provider if we have questions or issues. Be a team player here.
 # This is disabled, was only added for testing, and has no config.ini or web ui setting. To enable, set SPOOF_USER_AGENT = True
 SPOOF_USER_AGENT = False
-INSTANCE_ID = str(uuid.uuid1())
-USER_AGENT = ('Sick-Rage.CE.1/(' + platform.system() + '; ' + platform.release() + '; ' + INSTANCE_ID + ')')
-UA_SETTINGS.DB = ek(path.abspath, ek(path.join, ek(path.dirname, __file__), '../lib/fake_useragent/ua.json'))
-UA_POOL = UserAgent()
+fake_ua_db = ek(path.abspath, ek(path.join, ek(path.dirname, __file__), 'utils/fake_useragents.json'))
+UA_POOL = FakeUserAgent(path=fake_ua_db)
 if SPOOF_USER_AGENT:
     USER_AGENT = UA_POOL.random
 

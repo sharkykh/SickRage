@@ -10,7 +10,7 @@ certifi == 2017.4.17
 cfscrape == 1.7.1  # rq.filter: <1.8.0
 chardet == 3.0.4
 configobj == 4.6.0
-decorator == 4.0.10
+decorator == 4.1.1
 dogpile.cache == 0.6.4
 enzyme == 0.4.1
 fake-useragent == 0.1.2  # [NOTE] there's a `ua.json` file that's used by sickbeard.common, should be moved to a better location.

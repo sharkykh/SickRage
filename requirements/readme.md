@@ -15,7 +15,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | cfscrape | 1.7.1 | Note: Can't upgrade to latest version<br>because Node.js is now required.
 :ok: | chardet | 3.0.4 | Resolved by [#3870](https://github.com/SickRage/SickRage/pull/3870)
 :ok: | configobj | 4.6.0
-:ok: | decorator | 4.0.10
+:ok: | decorator | 4.1.1
 :ok: | dogpile.cache | 0.6.4
 :ok: | enzyme | 0.4.1
 :ok: | fake-useragent | 0.1.2 | Note: There's a `ua.json` file that's used by `sickbeard.common`,<br>should be moved to a better location.

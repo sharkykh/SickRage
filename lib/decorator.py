@@ -1,6 +1,6 @@
 # #########################     LICENSE     ############################ #
 
-# Copyright (c) 2005-2016, Michele Simionato
+# Copyright (c) 2005-2017, Michele Simionato
 # All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
@@ -40,7 +40,7 @@ import operator
 import itertools
 import collections
 
-__version__ = '4.0.10'
+__version__ = '4.1.1'
 
 if sys.version >= '3':
     from inspect import getfullargspec
@@ -48,24 +48,23 @@ if sys.version >= '3':
     def get_init(cls):
         return cls.__init__
 else:
-    class getfullargspec(object):
+    FullArgSpec = collections.namedtuple(
+        'FullArgSpec', 'args varargs varkw defaults '
+        'kwonlyargs kwonlydefaults')
+
+    def getfullargspec(f):
         "A quick and dirty replacement for getfullargspec for Python 2.X"
-        def __init__(self, f):
-            self.args, self.varargs, self.varkw, self.defaults = \
-                inspect.getargspec(f)
-            self.kwonlyargs = []
-            self.kwonlydefaults = None
-
-        def __iter__(self):
-            yield self.args
-            yield self.varargs
-            yield self.varkw
-            yield self.defaults
-
-        getargspec = inspect.getargspec
+        return FullArgSpec._make(inspect.getargspec(f) + ([], None))
 
     def get_init(cls):
         return cls.__init__.__func__
+
+try:
+    iscoroutinefunction = inspect.iscoroutinefunction
+except AttributeError:
+    # let's assume there are no coroutine functions in old Python
+    def iscoroutinefunction(f):
+        return False
 
 # getargspec has been deprecated in Python 3.5
 ArgSpec = collections.namedtuple(
@@ -77,7 +76,8 @@ def getargspec(f):
     spec = getfullargspec(f)
     return ArgSpec(spec.args, spec.varargs, spec.varkw, spec.defaults)
 
-DEF = re.compile('\s*def\s*([_\w][_\w\d]*)\s*\(')
+
+DEF = re.compile(r'\s*def\s*([_\w][_\w\d]*)\s*\(')
 
 
 # basic functionality
@@ -91,9 +91,13 @@ class FunctionMaker(object):
     # Atomic get-and-increment provided by the GIL
     _compile_count = itertools.count()
 
+    # make pylint happy
+    args = varargs = varkw = defaults = kwonlyargs = kwonlydefaults = ()
+
     def __init__(self, func=None, name=None, signature=None,
                  defaults=None, doc=None, module=None, funcdict=None):
         self.shortsignature = signature
+        self.coro = False
         if func:
             # func can be a class or a callable, but not an instance method
             self.name = func.__name__
@@ -102,6 +106,7 @@ class FunctionMaker(object):
             self.doc = func.__doc__
             self.module = func.__module__
             if inspect.isfunction(func):
+                self.coro = iscoroutinefunction(func)
                 argspec = getfullargspec(func)
                 self.annotations = getattr(func, '__annotations__', {})
                 for a in ('args', 'varargs', 'varkw', 'defaults', 'kwonlyargs',
@@ -112,7 +117,7 @@ class FunctionMaker(object):
                 if sys.version < '3':  # easy way
                     self.shortsignature = self.signature = (
                         inspect.formatargspec(
-                            formatvalue=lambda val: "", *argspec)[1:-1])
+                            formatvalue=lambda val: "", *argspec[:-2])[1:-1])
                 else:  # Python 3 way
                     allargs = list(self.args)
                     allshortargs = list(self.args)
@@ -153,8 +158,8 @@ class FunctionMaker(object):
         func.__name__ = self.name
         func.__doc__ = getattr(self, 'doc', None)
         func.__dict__ = getattr(self, 'dict', {})
-        func.__defaults__ = getattr(self, 'defaults', ())
-        func.__kwdefaults__ = getattr(self, 'kwonlydefaults', None)
+        func.__defaults__ = self.defaults
+        func.__kwdefaults__ = self.kwonlydefaults or None
         func.__annotations__ = getattr(self, 'annotations', None)
         try:
             frame = sys._getframe(3)
@@ -169,7 +174,7 @@ class FunctionMaker(object):
         "Make a new function from a given template and update the signature"
         src = src_templ % vars(self)  # expand name and signature
         evaldict = evaldict or {}
-        mo = DEF.match(src)
+        mo = DEF.search(src)
         if mo is None:
             raise SyntaxError('not a valid function template\n%s' % src)
         name = mo.group(1)  # extract the function name
@@ -218,8 +223,12 @@ class FunctionMaker(object):
             func = obj
         self = cls(func, name, signature, defaults, doc, module)
         ibody = '\n'.join('    ' + line for line in body.splitlines())
-        return self.make('def %(name)s(%(signature)s):\n' + ibody,
-                         evaldict, addsource, **attrs)
+        if self.coro:
+            body = ('async def %(name)s(%(signature)s):\n' + ibody).replace(
+                'return', 'return await')
+        else:
+            body = 'def %(name)s(%(signature)s):\n' + ibody
+        return self.make(body, evaldict, addsource, **attrs)
 
 
 def decorate(func, caller):
@@ -275,6 +284,7 @@ class ContextManager(_GeneratorContextManager):
         return FunctionMaker.create(
             func, "with _self_: return _func_(%(shortsignature)s)",
             dict(_self_=self, _func_=func), __wrapped__=func)
+
 
 init = getfullargspec(_GeneratorContextManager.__init__)
 n_args = len(init.args)
@@ -344,7 +354,7 @@ def dispatch_on(*dispatch_args):
             ras = [[] for _ in range(len(dispatch_args))]
             for types_ in typemap:
                 for t, type_, ra in zip(types, types_, ras):
-                    if issubclass(t, type_) and type_ not in t.__mro__:
+                    if issubclass(t, type_) and type_ not in t.mro():
                         append(type_, ra)
             return [set(ra) for ra in ras]
 
@@ -361,9 +371,9 @@ def dispatch_on(*dispatch_args):
                         'Ambiguous dispatch for %s: %s' % (t, vas))
                 elif n_vas == 1:
                     va, = vas
-                    mro = type('t', (t, va), {}).__mro__[1:]
+                    mro = type('t', (t, va), {}).mro()[1:]
                 else:
-                    mro = t.__mro__
+                    mro = t.mro()
                 lists.append(mro[:-1])  # discard t and object
             return lists
 
@@ -372,6 +382,7 @@ def dispatch_on(*dispatch_args):
             Decorator to register an implementation for the given types
             """
             check(types)
+
             def dec(f):
                 check(getfullargspec(f).args, operator.lt, ' in ' + f.__name__)
                 typemap[types] = f

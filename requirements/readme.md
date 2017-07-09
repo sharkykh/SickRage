@@ -36,13 +36,11 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | Mako | 1.0.6
 :ok: | markdown2 | 2.3.4 | Resolved by [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | MarkupSafe | 1.0
-:ok: | ndg-httpsclient | 0.3.3
 :ok: | oauthlib | 2.0.2 | Added in [#3870](https://github.com/SickRage/SickRage/pull/3870)
 :warning: | pgi | [38f8349](https://github.com/pygobject/pgi/tree/38f834902247a5851cb4c72ba018f160ae26d612)
 :exclamation: | pkg_resources.py | - | Copied from setuptools and looks to be modified.<br>Used to load `pymediainfo*.egg` and `pytz*.egg` as packages.<br>Also explicitly used by: `babelfish`, `dogpile.cache`/`dogpile.util`, `enzyme`, `guessit`, `Mako`, `pymediainfo`, `pytz`, `stevedore`, `subliminal`.
 :ok: | profilehooks | 1.5
 :ok: | putio.py | 6.1.0
-:ok: | pyasn1 | 0.1.7 | + LICENSE
 :ok: | PyGithub | 1.34 | Resolved by [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | PyJWT | 1.5.0 | Added in [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | pymediainfo | 2.0 | as an `.egg` file, loaded by `pkg_resources`
@@ -88,7 +86,9 @@ dogpile.core | EOL | (Merged into dogpile.cache upstream)
 enum34 | Unused | (Was a dependency of `chardet`, but isn't anymore)
 LockFile | Deprecated | (Is an extra dependency of CacheControl, but wasn't being used)
 MultipartPostHandler.py | Unused | Removed in [#3716](https://github.com/SickRage/SickRage/pull/3716)
+ndg-httpsclient | Unused | Added [with pyOpenSSL when it was added](https://github.com/SickRage/SickRage/commit/69cd6cf8eaaf3193434e77956639eb237419bb63), but wasn't removed when [pyOpenSSL was removed](https://github.com/SickRage/SickRage/commit/78c8b5e17db3478e9580292463478c6250b62ac1).
 oauth2 | Outdated | Removed in [#3870](https://github.com/SickRage/SickRage/pull/3870)
+pyasn1 | Unused | Added [with pyOpenSSL when it was added](https://github.com/SickRage/SickRage/commit/69cd6cf8eaaf3193434e77956639eb237419bb63), but wasn't removed when [pyOpenSSL was removed](https://github.com/SickRage/SickRage/commit/78c8b5e17db3478e9580292463478c6250b62ac1).
 simplejson | Unused | Removed in [#3877](https://github.com/SickRage/SickRage/pull/3877)
 SocksiPy | Outdated | Replaced with PySocks in [#3877](https://github.com/SickRage/SickRage/pull/3877)
 SQLAlchemy | Unused

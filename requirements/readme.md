@@ -9,7 +9,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | backports.ssl-match-hostname | 3.5.0.1
 :ok: | beautifulsoup4 | 4.6.0
 :ok: | bencode | 1.0 | Resolved by [#3858](https://github.com/SickRage/SickRage/pull/3858) + [#3871](https://github.com/SickRage/SickRage/pull/3871)<br>A newer version (fork) is available: [GH:fuzeman/bencode.py](https://github.com/fuzeman/bencode.py)
-:ok: | cachecontrol | 0.11.5
+:ok: | CacheControl | 0.11.7 | Pinned to <0.12.0 because<br>the new 'msgpack-python' dependency has C extensions.
 :warning: | certgen.py | [d52975c](https://github.com/pyca/pyopenssl/blob/d52975cef3a36e18552aeb23de7c06aa73d76454/examples/certgen.py) | Source: [GH:pyca/pyopenssl](https://github.com/pyca/pyopenssl/blob/master/examples/certgen.py)
 :ok: | certifi | 2017.4.17
 :ok: | cfscrape | 1.7.1 | Note: Can't upgrade to latest version<br>because Node.js is now required.
@@ -33,7 +33,6 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :warning: | jsonrpclib | [e3a3cde](https://github.com/joshmarshall/jsonrpclib/tree/e3a3cdedc9577b25b91274815b38ba7f3bc43c68)
 :warning: | libgrowl | - | **Custom by Sick-Beard's midgetspy**<br>Some of the code is from [GH:kfdm/gntp](https://github.com/kfdm/gntp)
 :warning: | libtrakt | - | **Custom**<br>Just a small note -<br>if needed, [GH:fuzeman/trakt.py](https://github.com/fuzeman/trakt.py) is a great implementation of Trakt.tv's API.
-:ok: | lockfile | 0.11.0
 :ok: | Mako | 1.0.6
 :ok: | markdown2 | 2.3.4 | Resolved by [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | MarkupSafe | 1.0
@@ -87,6 +86,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :-------: | :------: | ---------
 dogpile.core | EOL | (Merged into dogpile.cache upstream)
 enum34 | Unused | (Was a dependency of `chardet`, but isn't anymore)
+LockFile | Deprecated | (Is an extra dependency of CacheControl, but wasn't being used)
 MultipartPostHandler.py | Unused | Removed in [#3716](https://github.com/SickRage/SickRage/pull/3716)
 oauth2 | Outdated | Removed in [#3870](https://github.com/SickRage/SickRage/pull/3870)
 simplejson | Unused | Removed in [#3877](https://github.com/SickRage/SickRage/pull/3877)

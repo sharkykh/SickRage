@@ -16,8 +16,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | chardet | 3.0.4 | Resolved by [#3870](https://github.com/SickRage/SickRage/pull/3870)
 :ok: | configobj | 4.6.0
 :ok: | decorator | 4.0.10
-:warning: | dogpile.cache | [229615b](https://bitbucket.org/zzzeek/dogpile.cache/src/229615be466d00c9c135a90d8965679ab3e4edaa/dogpile/) | Bitbucket
-:ok: | dogpile.core | 0.4.1
+:ok: | dogpile.cache | 0.6.4
 :ok: | enzyme | 0.4.1
 :ok: | fake-useragent | 0.1.2 | Note: There's a `ua.json` file that's used by `sickbeard.common`,<br>should be moved to a better location.
 :warning: | feedparser | [f1dd1bb](https://github.com/kurtmckee/feedparser/tree/f1dd1bb923ebfe6482fc2521c1f150b4032289ec) | Vanilla'd by [#3877](https://github.com/SickRage/SickRage/pull/3877)
@@ -86,6 +85,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 
  Package  |  Reason  | Reference
 :-------: | :------: | ---------
+dogpile.core | EOL | (Merged into dogpile.cache upstream)
 enum34 | Unused | (Was a dependency of `chardet`, but isn't anymore)
 MultipartPostHandler.py | Unused | Removed in [#3716](https://github.com/SickRage/SickRage/pull/3716)
 oauth2 | Outdated | Removed in [#3870](https://github.com/SickRage/SickRage/pull/3870)

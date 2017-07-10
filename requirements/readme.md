@@ -12,7 +12,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | CacheControl | 0.11.7 | Pinned to <0.12.0 because<br>the new 'msgpack-python' dependency has C extensions.
 :warning: | certgen.py | [d52975c](https://github.com/pyca/pyopenssl/blob/d52975cef3a36e18552aeb23de7c06aa73d76454/examples/certgen.py) | Source: [GH:pyca/pyopenssl](https://github.com/pyca/pyopenssl/blob/master/examples/certgen.py)
 :ok: | certifi | 2017.4.17
-:ok: | cfscrape | 1.7.1 | Note: Can't upgrade to latest version<br>because Node.js is now required.
+:ok: | cfscrape | 1.7.1 | Pinned to <1.8.0 because Node.js is now required.
 :ok: | chardet | 3.0.4 | Resolved by [#3870](https://github.com/SickRage/SickRage/pull/3870)
 :ok: | configobj | 4.6.0
 :ok: | decorator | 4.1.1
@@ -59,7 +59,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :exclamation: | send2trash | 1.3.0 | **Modified**<br>See [`9ad8114`](https://github.com/SickRage/SickRage/commit/9ad811432ab0ca3292410d29464ce2532361eb55)
 :ok: | singledispatch | 3.4.0.3
 :ok: | six | 1.10.0
-:ok: | stevedore | 1.10.0
+:ok: | stevedore | 1.19.1 | Pinned to <1.20.0 -- see [Diaoul/subliminal#780](https://github.com/Diaoul/subliminal/pull/780)
 :warning: | subliminal | [7eb7a53](https://github.com/Diaoul/subliminal/tree/7eb7a53fe6bcaf3e01a6b44c8366faf7c96f7f1b) | **Modified**<br>Subscenter provider disabled until fixed upstream, [#3825 `diff-ab7eb9b`](https://github.com/SickRage/SickRage/pull/3825/files#diff-ab7eb9ba0a2d4c74c16795ff40f2bd62)
 :warning: | synchronous-deluge | - | **Custom: by Christian Dale**
 :ok: | tmdbsimple | 0.3.0 | Note: Package naming is modified.

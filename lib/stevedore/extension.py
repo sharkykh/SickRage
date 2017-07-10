@@ -1,3 +1,15 @@
+#  Licensed under the Apache License, Version 2.0 (the "License"); you may
+#  not use this file except in compliance with the License. You may obtain
+#  a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#  License for the specific language governing permissions and limitations
+#  under the License.
+
 """ExtensionManager
 """
 
@@ -170,8 +182,15 @@ class ExtensionManager(object):
                 if self._on_load_failure_callback is not None:
                     self._on_load_failure_callback(self, ep, err)
                 else:
-                    LOG.error('Could not load %r: %s', ep.name, err)
-                    LOG.exception(err)
+                    # Log the reason we couldn't import the module,
+                    # usually without a traceback. The most common
+                    # reason is an ImportError due to a missing
+                    # dependency, and the error message should be
+                    # enough to debug that.  If debug logging is
+                    # enabled for our logger, provide the full
+                    # traceback.
+                    LOG.error('Could not load %r: %s', ep.name, err,
+                              exc_info=LOG.isEnabledFor(logging.DEBUG))
         return extensions
 
     def _load_one_plugin(self, ep, invoke_on_load, invoke_args, invoke_kwds,

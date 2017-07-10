@@ -36,7 +36,7 @@ git+https://github.com/pygobject/pgi.git@38f834902247a5851cb4c72ba018f160ae26d61
 #! pkg_resources.py  # Copied from setuptools and looks to be modified. See readme for more info.
 profilehooks == 1.9.0
 putio.py == 7.0.0
-PyGithub == 1.34
+PyGithub == 1.35
 PyJWT == 1.5.0
 pymediainfo == 2.0  # as an .egg file, loaded by pkg_resources
 pynma == 1.0

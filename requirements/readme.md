@@ -41,7 +41,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :exclamation: | pkg_resources.py | - | Copied from setuptools and looks to be modified.<br>Used to load `pymediainfo*.egg` and `pytz*.egg` as packages.<br>Also explicitly used by: `babelfish`, `dogpile.cache`/`dogpile.util`, `enzyme`, `guessit`, `Mako`, `pymediainfo`, `pytz`, `stevedore`, `subliminal`.
 :ok: | profilehooks | 1.9.0
 :ok: | putio.py | 7.0.0
-:ok: | PyGithub | 1.34 | Resolved by [#3877](https://github.com/SickRage/SickRage/pull/3877)
+:ok: | PyGithub | 1.35
 :ok: | PyJWT | 1.5.0 | Added in [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | pymediainfo | 2.0 | as an `.egg` file, loaded by `pkg_resources`
 :ok: | pynma | 1.0

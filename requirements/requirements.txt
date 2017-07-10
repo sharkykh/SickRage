@@ -35,7 +35,7 @@ oauthlib == 2.0.2
 git+https://github.com/pygobject/pgi.git@38f834902247a5851cb4c72ba018f160ae26d612#egg=pgi ; os.name != 'nt'
 #! pkg_resources.py  # Copied from setuptools and looks to be modified. See readme for more info.
 profilehooks == 1.9.0
-putio.py == 6.1.0
+putio.py == 7.0.0
 PyGithub == 1.34
 PyJWT == 1.5.0
 pymediainfo == 2.0  # as an .egg file, loaded by pkg_resources
@@ -59,7 +59,7 @@ stevedore == 1.19.1  # rq.filter: <1.20.0
 # synchronous-deluge  # <Custom: by Christian Dale>
 tmdbsimple == 0.3.0  # [NOTE] Package naming is modified.
 tornado == 4.5.1  # [NOTE] Contains a `routes.py` file, which is not a part of the original package
-tus.py == 1.2.0
+tus.py == 1.3.0
 #! tvdb_api == 1.9  # <Heavily Modified> Deprecated API, will be disabled by October 1st, 2017
 twilio == 5.7.0
 tzlocal == 1.4

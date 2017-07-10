@@ -40,7 +40,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :warning: | pgi | [38f8349](https://github.com/pygobject/pgi/tree/38f834902247a5851cb4c72ba018f160ae26d612)
 :exclamation: | pkg_resources.py | - | Copied from setuptools and looks to be modified.<br>Used to load `pymediainfo*.egg` and `pytz*.egg` as packages.<br>Also explicitly used by: `babelfish`, `dogpile.cache`/`dogpile.util`, `enzyme`, `guessit`, `Mako`, `pymediainfo`, `pytz`, `stevedore`, `subliminal`.
 :ok: | profilehooks | 1.9.0
-:ok: | putio.py | 6.1.0
+:ok: | putio.py | 7.0.0
 :ok: | PyGithub | 1.34 | Resolved by [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | PyJWT | 1.5.0 | Added in [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | pymediainfo | 2.0 | as an `.egg` file, loaded by `pkg_resources`
@@ -64,7 +64,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :warning: | synchronous-deluge | - | **Custom: by Christian Dale**
 :ok: | tmdbsimple | 0.3.0 | Note: Package naming is modified.
 :ok: | tornado | 4.5.1 | Note: Contains a `routes.py` file,<br>which is not a part of the original package
-:ok: | tus.py | 1.2.0
+:ok: | tus.py | 1.3.0
 :exclamation: | tvdb_api | 1.9 | **Heavily Modified**<br>Deprecated API, will be disabled by October 1st, 2017
 :ok: | twilio | 5.7.0 | Next version is a major (6.0.0)
 :ok: | tzlocal | 1.4 | Resolved by [#3877](https://github.com/SickRage/SickRage/pull/3877)

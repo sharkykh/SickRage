@@ -2525,6 +2525,55 @@ class Blake2SP(object):
         """Hexadecimal digest."""
         return tohex(self.digest())
 
+
+class Rar3Sha1(object):
+    """Bug-compat for SHA1
+    """
+    digest_size = 20
+    block_size = 64
+
+    _BLK = struct.Struct(b'>16L')
+    _BLKx = struct.Struct(b'<16L')
+
+    __slots__ = ('_nbytes', '_md', '_rarbug', '_workspace')
+
+    def __init__(self, data=b'', rarbug=False):
+        self._md = sha1()
+        self._nbytes = 0
+        self._rarbug = rarbug
+        self._workspace = [0] * 16
+        self.update(data)
+
+    def update(self, data):
+        """Process more data."""
+        self._md.update(data)
+        bufpos = self._nbytes & 63
+        self._nbytes += len(data)
+
+        if self._rarbug and len(data) > 64:
+            dpos = self.block_size - bufpos
+            while dpos + self.block_size <= len(data):
+                self._corrupt(data, dpos)
+                dpos += self.block_size
+
+    def digest(self):
+        """Return final state."""
+        return self._md.digest()
+
+    def hexdigest(self):
+        """Return final state as hex string."""
+        return self._md.hexdigest()
+
+    def _corrupt(self, data, dpos):
+        """Corruption from SHA1 core."""
+        ws = self._workspace
+        ws[:] = self._BLK.unpack_from(data, dpos)
+        for t in range(16, 80):
+            tmp = ws[(t - 3) & 15] ^ ws[(t - 8) & 15] ^ ws[(t - 14) & 15] ^ ws[(t - 16) & 15]
+            ws[t & 15] = ((tmp << 1) | (tmp >> (32 - 1))) & 0xFFFFFFFF
+        self._BLKx.pack_into(data, dpos, *ws)
+
+
 ##
 ## Utility functions
 ##
@@ -2672,7 +2721,7 @@ def _parse_xtime(flag, data, pos, basetime=None):
 def is_filelike(obj):
     """Filename or file object?
     """
-    if isinstance(obj, str) or isinstance(obj, unicode):
+    if isinstance(obj, (bytes, unicode)):
         return False
     res = True
     for a in ('read', 'tell', 'seek'):
@@ -2686,13 +2735,14 @@ def rar3_s2k(psw, salt):
     """
     if not isinstance(psw, unicode):
         psw = psw.decode('utf8')
-    seed = psw.encode('utf-16le') + salt
+    seed = bytearray(psw.encode('utf-16le') + salt)
+    h = Rar3Sha1(rarbug=True)
     iv = EMPTY
-    h = sha1()
     for i in range(16):
         for j in range(0x4000):
             cnt = S_LONG.pack(i * 0x4000 + j)
-            h.update(seed + cnt[:3])
+            h.update(seed)
+            h.update(cnt[:3])
             if j == 0:
                 iv += h.digest()[19:20]
     key_be = h.digest()[:16]
@@ -2946,7 +2996,7 @@ def _check_unrar_tool():
         except RarCannotExec:
             # no usable tool, only uncompressed archives work
             return False
-
     return True
 
 _check_unrar_tool()
+

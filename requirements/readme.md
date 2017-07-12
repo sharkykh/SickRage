@@ -51,7 +51,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :exclamation: | python-fanart | 1.4.0 | **Modified**<br>API url was updated. No newer version.
 :ok: | python-twitter | 3.3 | Updated in [#3870](https://github.com/SickRage/SickRage/pull/3870)
 :ok: | pytz | 2016.4 | as an `.egg` file, loaded by `pkg_resources`
-:exclamation: | rarfile | [3e54b22](https://github.com/markokr/rarfile/tree/3e54b222c8703eea64cd07102df7bb9408b582b3) | *v3.0 Github release*<br>**Modified**<br>See [`059dd933#diff-c1f4e96`](https://github.com/SickRage/SickRage/commit/059dd933b9da3a0f83c6cbb4f47c198e5a957fc6#diff-c1f4e968aa545d42d2e462672169da4a)
+:warning: | rarfile | [c074828](https://github.com/markokr/rarfile/tree/c0748286f892c2c8e705df12995b7a2f4dce345b)
 :warning: | rebulk | [42d0a58](https://github.com/Toilal/rebulk/tree/42d0a58af9d793334616a6582f2a83b0fae0dd5f)
 :ok: | requests | 2.18.1 | Updated in [#3870](https://github.com/SickRage/SickRage/pull/3870)
 :ok: | requests-oauthlib | 0.8.0 | Added in [#3870](https://github.com/SickRage/SickRage/pull/3870)

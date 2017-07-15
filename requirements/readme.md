@@ -33,7 +33,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :warning: | jsonrpclib | [e3a3cde](https://github.com/joshmarshall/jsonrpclib/tree/e3a3cdedc9577b25b91274815b38ba7f3bc43c68)
 :warning: | libgrowl | - | **Custom by Sick-Beard's midgetspy**<br>Some of the code is from [GH:kfdm/gntp](https://github.com/kfdm/gntp)
 :warning: | libtrakt | - | **Custom**<br>Just a small note -<br>if needed, [GH:fuzeman/trakt.py](https://github.com/fuzeman/trakt.py) is a great implementation of Trakt.tv's API.
-:ok: | Mako | 1.0.6
+:ok: | Mako | 1.0.7
 :ok: | markdown2 | 2.3.4 | Resolved by [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | MarkupSafe | 1.0
 :ok: | oauthlib | 2.0.2 | Added in [#3870](https://github.com/SickRage/SickRage/pull/3870)

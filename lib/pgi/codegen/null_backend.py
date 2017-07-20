@@ -77,9 +77,6 @@ class BaseType(object):
     def alloc(self):
         return "new"
 
-    def ref_sink_variant(self, name):
-        pass
-
 
 class NullBackend(Backend):
     NAME = "null"

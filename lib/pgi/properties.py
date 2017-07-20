@@ -279,31 +279,26 @@ class _PropsDescriptor(object):
         return attr
 
 
-def list_properties(type):
-    """
-    :param type: a Python GObject instance or type that the signal is associated with
-    :type type: :obj:`GObject.Object`
-
-    :returns: a list of :obj:`GObject.ParamSpec`
-    :rtype: [:obj:`GObject.ParamSpec`]
+def list_properties(cls):
+    """list_properties(cls: GObject.Object or GObject.GInterface or GObejct.GType) -> [GObject.ParamSpec]
 
     Takes a GObject/GInterface subclass or a GType and returns a list of
-    GParamSpecs for all properties of `type`.
+    GParamSpecs of all properties.
     """
 
-    if isinstance(type, PGType):
-        type = type.pytype
+    if isinstance(cls, PGType):
+        cls = cls.pytype
 
     from pgi.obj import Object, InterfaceBase
 
-    if not issubclass(type, (Object, InterfaceBase)):
+    if not issubclass(cls, (Object, InterfaceBase)):
         raise TypeError("Must be a subclass of %s or %s" %
                         (Object.__name__, InterfaceBase.__name__))
 
     gparams = []
-    for key in dir(type.props):
+    for key in dir(cls.props):
         if not key.startswith("_"):
-            gparams.append(getattr(type.props, key))
+            gparams.append(getattr(cls.props, key))
     return gparams
 
 

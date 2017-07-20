@@ -188,12 +188,10 @@ class ArrayField(Field):
             self.py_type = [elm_type.py_type]
 
     def get(self, name):
-        var = self.backend.get_type(self.type)
-        out = var.unpack(name, None)
-        return var.block, out
+        return None, "None"
 
     def set(self, name, value_name):
-        raise NotImplementedError("Array setters are not implemented")
+        return None, ""
 
 
 class Utf8Field(BasicField):

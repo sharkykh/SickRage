@@ -26,7 +26,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :warning: | hachoir_metadata | [708fdf6](https://bitbucket.org/haypo/hachoir/src/708fdf64a982ba2e638aa59d94f143112066b8ce/hachoir-metadata/hachoir_metadata/) | Bitbucket
 :warning: | hachoir_parser | [708fdf6](https://bitbucket.org/haypo/hachoir/src/708fdf64a982ba2e638aa59d94f143112066b8ce/hachoir-parser/hachoir_parser/) | Bitbucket
 :ok: | html5lib | 1.0b10
-:ok: | httplib2 | 0.9.2 | + tests folder from [cf631a7](https://github.com/httplib2/httplib2/tree/cf631a73e2f3f43897b65206127ced82382d35f5)
+:ok: | httplib2 | 0.10.3
 :ok: | idna | 2.5 | Added in [#3870](https://github.com/SickRage/SickRage/pull/3870)
 :warning: | IMDbPY | 5.1.1 | Resolved by [#3877](https://github.com/SickRage/SickRage/pull/3877)<br>**Still can't install this from requirements.txt**,<br>because we need to be able to use `--no-deps`, but it's unsupported in the context of requirement files.<br>A workaround seems to be to use `pip install --no-deps -r requirements.txt`, which is fine as long as we list ALL dependencies (which is planned).<br>Also, I don't think `install_requires` in `setup.py` supports anything more than simple package version constraints, maybe VCS sources (git/mercurial/etc..) - untested.
 :warning: | js2py | [05e77f0](https://github.com/PiotrDabkowski/Js2Py/tree/05e77f0d4ffe91ef418a93860e666962cfd193b8)

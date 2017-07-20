@@ -63,7 +63,6 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :exclamation: | send2trash | 1.3.0 | **Modified**<br>See [`9ad8114`](https://github.com/SickRage/SickRage/commit/9ad811432ab0ca3292410d29464ce2532361eb55)
 :ok: | singledispatch | 3.4.0.3
 :ok: | six | 1.10.0
-:warning: | sqlalchemy | [ccc0c44](https://github.com/zzzeek/sqlalchemy/tree/ccc0c44c3a60fc4906e5e3b26cc6d2b7a69d33bf)
 :ok: | stevedore | 1.10.0
 :warning: | subliminal | [7eb7a53](https://github.com/Diaoul/subliminal/tree/7eb7a53fe6bcaf3e01a6b44c8366faf7c96f7f1b) | **Modified**<br>Subscenter provider disabled until fixed upstream, [#3825 `diff-ab7eb9b`](https://github.com/SickRage/SickRage/pull/3825/files#diff-ab7eb9ba0a2d4c74c16795ff40f2bd62)
 :warning: | synchronous-deluge | - | **Custom: by Christian Dale**
@@ -92,4 +91,5 @@ MultipartPostHandler.py | Unused | Removed in [#3716](https://github.com/SickRag
 oauth2 | Outdated | Removed in [#3870](https://github.com/SickRage/SickRage/pull/3870)
 simplejson | Unused | Removed in [#3877](https://github.com/SickRage/SickRage/pull/3877)
 SocksiPy | Outdated | Replaced with PySocks in [#3877](https://github.com/SickRage/SickRage/pull/3877)
+SQLAlchemy | Unused
 sqliteshelf.py | Unused | Removed in [#3716](https://github.com/SickRage/SickRage/pull/3716)

@@ -52,7 +52,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | python-twitter | 3.3 | Updated in [#3870](https://github.com/SickRage/SickRage/pull/3870)
 :ok: | pytz | 2016.4 | as an `.egg` file, loaded by `pkg_resources`
 :warning: | rarfile | [c074828](https://github.com/markokr/rarfile/tree/c0748286f892c2c8e705df12995b7a2f4dce345b)
-:warning: | rebulk | [42d0a58](https://github.com/Toilal/rebulk/tree/42d0a58af9d793334616a6582f2a83b0fae0dd5f)
+:ok: | rebulk | 0.9.0
 :ok: | requests | 2.18.1 | Updated in [#3870](https://github.com/SickRage/SickRage/pull/3870)
 :ok: | requests-oauthlib | 0.8.0 | Added in [#3870](https://github.com/SickRage/SickRage/pull/3870)
 :exclamation: | rtorrent-python | 0.2.9 | **Modified**<br>See [commits log for `lib/rtorrent`](https://github.com/SickRage/SickRage/commits/master/lib/rtorrent)

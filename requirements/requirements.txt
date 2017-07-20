@@ -47,7 +47,7 @@ python-dateutil == 2.6.1
 python-twitter == 3.3
 pytz == 2016.4  # as an .egg file, loaded by pkg_resources
 git+https://github.com/markokr/rarfile.git@c0748286f892c2c8e705df12995b7a2f4dce345b#egg=rarfile
-git+https://github.com/Toilal/rebulk.git@42d0a58af9d793334616a6582f2a83b0fae0dd5f#egg=rebulk
+rebulk == 0.9.0
 requests == 2.18.1
 requests-oauthlib == 0.8.0
 #! rtorrent-python == 0.2.9  # <Modified: See https://github.com/SickRage/SickRage/commits/master/lib/rtorrent>

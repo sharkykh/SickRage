@@ -50,7 +50,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | python-dateutil | 2.6.1
 :exclamation: | python-fanart | 1.4.0 | **Modified**<br>API url was updated. No newer version.
 :ok: | python-twitter | 3.3 | Updated in [#3870](https://github.com/SickRage/SickRage/pull/3870)
-:ok: | pytz | 2016.4 | as an `.egg` file, loaded by `pkg_resources`
+:ok: | pytz | 2017.2 | as an `.egg` file, loaded by `pkg_resources`
 :warning: | rarfile | [c074828](https://github.com/markokr/rarfile/tree/c0748286f892c2c8e705df12995b7a2f4dce345b)
 :ok: | rebulk | 0.9.0
 :ok: | requests | 2.18.1 | Updated in [#3870](https://github.com/SickRage/SickRage/pull/3870)

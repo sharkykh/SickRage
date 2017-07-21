@@ -9,7 +9,7 @@ CacheControl == 0.11.7  # rq.filter: <0.12.0
 certifi == 2017.4.17
 cfscrape == 1.7.1  # rq.filter: <1.8.0
 chardet == 3.0.4
-configobj == 4.6.0
+configobj == 4.7.2  # rq.filter: >=5.1.0
 decorator == 4.1.1
 dogpile.cache == 0.6.4
 enzyme == 0.4.1

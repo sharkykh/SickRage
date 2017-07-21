@@ -14,7 +14,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | certifi | 2017.4.17
 :ok: | cfscrape | 1.7.1 | Pinned to <1.8.0 because Node.js is now required.
 :ok: | chardet | 3.0.4 | Resolved by [#3870](https://github.com/SickRage/SickRage/pull/3870)
-:ok: | configobj | 4.6.0
+:ok: | configobj | 4.7.2
 :ok: | decorator | 4.1.1
 :ok: | dogpile.cache | 0.6.4
 :ok: | enzyme | 0.4.1

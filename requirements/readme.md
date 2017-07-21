@@ -38,7 +38,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | MarkupSafe | 1.0
 :ok: | oauthlib | 2.0.2 | Added in [#3870](https://github.com/SickRage/SickRage/pull/3870)
 :ok: | pgi | 0.0.11.1 | Not installed on Windows (\*nix only library)
-:exclamation: | pkg_resources.py | - | Copied from setuptools and looks to be modified.<br>Used to load `pymediainfo*.egg` and `pytz*.egg` as packages.<br>Also explicitly used by: `babelfish`, `dogpile.cache`/`dogpile.util`, `enzyme`, `guessit`, `Mako`, `pymediainfo`, `pytz`, `stevedore`, `subliminal`.
+:exclamation: | pkg_resources | 36.2.0 | Not a real package - copied from setuptools (at the specified version).<br>Used to load `pymediainfo*.egg` and `pytz*.egg` as packages.<br>Also explicitly used by: `babelfish`, `dogpile.cache`/`dogpile.util`, `enzyme`, `guessit`, `Mako`, `pymediainfo`, `pytz`, `stevedore`, `subliminal`.
 :ok: | profilehooks | 1.9.0
 :ok: | putio.py | 7.0.0
 :ok: | PyGithub | 1.35

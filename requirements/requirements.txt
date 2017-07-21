@@ -33,7 +33,7 @@ markdown2 == 2.3.4
 MarkupSafe == 1.0
 oauthlib == 2.0.2
 pgi == 0.0.11.1 ; os.name != 'nt'
-#! pkg_resources.py  # Copied from setuptools and looks to be modified. See readme for more info.
+# pkg_resources == 36.2.0  # Not a real package - copied from setuptools (at the specified version). See readme for usage info.
 profilehooks == 1.9.0
 putio.py == 7.0.0
 PyGithub == 1.35

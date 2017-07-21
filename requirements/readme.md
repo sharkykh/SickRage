@@ -43,7 +43,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | putio.py | 7.0.0
 :ok: | PyGithub | 1.35
 :ok: | PyJWT | 1.5.0 | Added in [#3877](https://github.com/SickRage/SickRage/pull/3877)
-:ok: | pymediainfo | 2.0 | as an `.egg` file, loaded by `pkg_resources`
+:ok: | pymediainfo | 2.1.9 | as an `.egg` file, loaded by `pkg_resources`
 :ok: | pynma | 1.0
 :ok: | PySocks | 1.6.7 | Added in [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | pysrt | 1.1.1

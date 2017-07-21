@@ -69,7 +69,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | twilio | 5.7.0 | Next version is a major (6.0.0)
 :ok: | tzlocal | 1.4 | Resolved by [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | Unidecode | 0.04.21 | Updated in [#3877](https://github.com/SickRage/SickRage/pull/3877)
-:ok: | urllib3 | 1.21.1 | Added in [#3870](https://github.com/SickRage/SickRage/pull/3870)
+:ok: | urllib3 | 1.22
 :ok: | validators | 0.10
 :ok: | webencodings | 0.5.1
 :ok: | win-inet-pton | 1.0.1 | Required for PySocks on Windows systems<br>Added in [#3877](https://github.com/SickRage/SickRage/pull/3877)

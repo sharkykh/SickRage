@@ -21,7 +21,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :ok: | fake-useragent | 0.1.7
 :warning: | feedparser | [f1dd1bb](https://github.com/kurtmckee/feedparser/tree/f1dd1bb923ebfe6482fc2521c1f150b4032289ec) | Vanilla'd by [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | futures | 3.1.1
-:warning: | guessit | [a4fb286](https://github.com/guessit-io/guessit/tree/a4fb2865d4b697397aa976388bbd0edf558a24fb)
+:ok: | guessit | 2.1.4
 :warning: | hachoir_core | [708fdf6](https://bitbucket.org/haypo/hachoir/src/708fdf64a982ba2e638aa59d94f143112066b8ce/hachoir-core/hachoir_core/) | Bitbucket
 :warning: | hachoir_metadata | [708fdf6](https://bitbucket.org/haypo/hachoir/src/708fdf64a982ba2e638aa59d94f143112066b8ce/hachoir-metadata/hachoir_metadata/) | Bitbucket
 :warning: | hachoir_parser | [708fdf6](https://bitbucket.org/haypo/hachoir/src/708fdf64a982ba2e638aa59d94f143112066b8ce/hachoir-parser/hachoir_parser/) | Bitbucket

@@ -32,8 +32,13 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :warning: | js2py | [05e77f0](https://github.com/PiotrDabkowski/Js2Py/tree/05e77f0d4ffe91ef418a93860e666962cfd193b8)
 :ok: | jsonrpclib | 0.1.7
 :warning: | libgrowl | - | **Custom by Sick-Beard's midgetspy**<br>Some of the code is from [GH:kfdm/gntp](https://github.com/kfdm/gntp)
+<<<<<<< HEAD
 :warning: | libtrakt | - | **Custom**<br>Just a small note -<br>if needed, [GH:fuzeman/trakt.py](https://github.com/fuzeman/trakt.py) is a great implementation of Trakt.tv's API.
 :ok: | Mako | 1.0.7
+=======
+:ok: | lockfile | 0.11.0
+:ok: | Mako | 1.0.6
+>>>>>>> rewrite-libtrakt
 :ok: | markdown2 | 2.3.4 | Resolved by [#3877](https://github.com/SickRage/SickRage/pull/3877)
 :ok: | MarkupSafe | 1.0
 :ok: | oauthlib | 2.0.2 | Added in [#3870](https://github.com/SickRage/SickRage/pull/3870)
@@ -84,6 +89,7 @@ List of dependencies [![Requirements Status](https://requires.io/github/SickRage
 :-------: | :------: | ---------
 dogpile.core | EOL | (Merged into dogpile.cache upstream)
 enum34 | Unused | (Was a dependency of `chardet`, but isn't anymore)
+libtrakt | Moved | Updated and moved into /sickrage/custom in [#3949](https://github.com/SickRage/SickRage/pull/3949)
 LockFile | Deprecated | (Is an extra dependency of CacheControl, but wasn't being used)
 MultipartPostHandler.py | Unused | Removed in [#3716](https://github.com/SickRage/SickRage/pull/3716)
 ndg-httpsclient | Unused | Added [with pyOpenSSL when it was added](https://github.com/SickRage/SickRage/commit/69cd6cf8eaaf3193434e77956639eb237419bb63), but wasn't removed when [pyOpenSSL was removed](https://github.com/SickRage/SickRage/commit/78c8b5e17db3478e9580292463478c6250b62ac1).

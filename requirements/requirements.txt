@@ -27,7 +27,6 @@ idna == 2.5
 git+https://github.com/PiotrDabkowski/Js2Py.git@05e77f0d4ffe91ef418a93860e666962cfd193b8#egg=js2py
 jsonrpclib == 0.1.7
 # libgrowl  # <Custom: by Sick-Beard's midgetspy. Some of the code is from https://github.com/kfdm/gntp>
-# libtrakt  # <Custom> Just a small note - https://github.com/fuzeman/trakt.py is a great implementation of Trakt.tv's API, if needed
 Mako == 1.0.7
 markdown2 == 2.3.4
 MarkupSafe == 1.0
